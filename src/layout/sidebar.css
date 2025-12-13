@@ -1,33 +1,23 @@
-import { NavLink } from "react-router-dom";
-
-const linkStyle = ({ isActive }) => ({
-  display: "block",
-  padding: "10px 14px",
-  marginBottom: 6,
-  borderRadius: 6,
-  textDecoration: "none",
-  color: isActive ? "#22d3ee" : "#9ca3af",
-  background: isActive ? "rgba(34,211,238,0.1)" : "transparent",
-  boxShadow: isActive ? "0 0 10px rgba(34,211,238,.4)" : "none"
-});
-
-export default function Sidebar() {
-  return (
-    <aside
-      style={{
-        width: 240,
-        background: "#020617",
-        padding: 20,
-        borderRight: "1px solid #111827"
-      }}
-    >
-      <h2 style={{ color: "#22d3ee", textShadow: "0 0 10px #22d3ee" }}>
-        HustleHub
-      </h2>
-
-      <NavLink to="/" style={linkStyle}>Dashboard</NavLink>
-      <NavLink to="/contacts" style={linkStyle}>Contacts</NavLink>
-      <NavLink to="/pipelines" style={linkStyle}>Pipelines</NavLink>
-    </aside>
-  );
+.sidebar {
+  width: 230px;
+  background: #0a0f1f;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 0 12px #00aaff;
 }
+
+.sidebar a {
+  color: #9bdcff;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  color: #00aaff;
+  text-shadow: 0 0 8px #00aaff;
+}
+
