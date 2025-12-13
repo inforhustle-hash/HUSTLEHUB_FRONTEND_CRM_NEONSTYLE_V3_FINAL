@@ -10,7 +10,7 @@ export default function Header() {
         Welcome, {user?.name || "User"}
       </div>
 
-      <button onClick={logout} className="logout-btn">
+      <button className="logout-btn" onClick={logout}>
         Logout
       </button>
     </div>
