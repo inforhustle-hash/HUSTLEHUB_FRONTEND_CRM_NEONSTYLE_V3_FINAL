@@ -1,1 +1,18 @@
-.header{padding:15px;background:linear-gradient(90deg,#00eaff,#7b2ff7);box-shadow:0 0 12px #00eaff;}
+.header {
+  background: #0a0f1f;
+  padding: 15px 20px;
+  color: white;
+  box-shadow: 0 0 12px #00aaff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-btn {
+  background: #ff4444;
+  padding: 8px 12px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
