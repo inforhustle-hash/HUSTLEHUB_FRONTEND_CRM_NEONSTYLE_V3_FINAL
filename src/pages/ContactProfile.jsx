@@ -1,0 +1,1 @@
+export default function ContactProfile(){return <h2>Contact Profile</h2>;}

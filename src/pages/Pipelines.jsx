@@ -1,0 +1,1 @@
+export default function Pipelines(){return <h2>Pipelines</h2>;}
