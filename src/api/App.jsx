@@ -1,7 +1,5 @@
-import axios from "axios";
+import Login from "./pages/Login";
 
-const API = axios.create({
-  baseURL: "https://hustlehub-backend-crm-neonstyle-v3-final.onrender.com"
-});
-
-export default API;
+export default function App() {
+  return <Login />;
+}
