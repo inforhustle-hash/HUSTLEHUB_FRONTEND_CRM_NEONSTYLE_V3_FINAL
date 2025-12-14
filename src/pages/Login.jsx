@@ -18,7 +18,9 @@ export default function Login() {
       });
 
       localStorage.setItem("token", res.data.token);
-      navigate("/dashboard");
+
+      // ✅ FIXED: dashboard lives at "/"
+      navigate("/");
     } catch (err) {
       setError("Invalid email or password");
     }
@@ -40,73 +42,7 @@ export default function Login() {
           padding: 40,
           borderRadius: 12,
           width: 360,
-          boxShadow: "var(--glow-cyan)",
-        }}
-      >
-        <h2 style={{ marginBottom: 20, textAlign: "center" }}>Login</h2>
+          box
 
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          style={{
-            width: "100%",
-            padding: 10,
-            marginBottom: 12,
-            borderRadius: 6,
-            border: "1px solid #1f2937",
-            background: "var(--bg-panel-2)",
-            color: "var(--text-main)",
-          }}
-        />
 
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          style={{
-            width: "100%",
-            padding: 10,
-            marginBottom: 16,
-            borderRadius: 6,
-            border: "1px solid #1f2937",
-            background: "var(--bg-panel-2)",
-            color: "var(--text-main)",
-          }}
-        />
-
-        <button
-          onClick={handleLogin}
-          style={{
-            width: "100%",
-            padding: 12,
-            borderRadius: 6,
-            border: "none",
-            background: "var(--neon-cyan)",
-            color: "#020617",
-            fontWeight: "bold",
-            cursor: "pointer",
-            boxShadow: "var(--glow-cyan)",
-          }}
-        >
-          Login
-        </button>
-
-        {error && (
-          <p
-            style={{
-              marginTop: 12,
-              textAlign: "center",
-              color: "var(--neon-pink)",
-            }}
-          >
-            {error}
-          </p>
-        )}
-      </div>
-    </div>
-  );
-}
 
