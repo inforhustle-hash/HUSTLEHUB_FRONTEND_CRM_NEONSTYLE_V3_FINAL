@@ -17,12 +17,12 @@ export default function Login() {
         password,
       });
 
+      // backend returns { token }
       localStorage.setItem("token", res.data.token);
 
-      // ✅ FIXED: dashboard lives at "/"
       navigate("/");
     } catch (err) {
-      setError("Invalid email or password");
+      setError("Login failed");
     }
   };
 
@@ -42,7 +42,27 @@ export default function Login() {
           padding: 40,
           borderRadius: 12,
           width: 360,
-          box
+          boxShadow: "var(--glow-cyan)",
+        }}
+      >
+        <h2 style={{ marginBottom: 20, textAlign: "center" }}>Login</h2>
 
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          style={{
+            width: "100%",
+            padding: 10,
+            marginBottom: 12,
+            borderRadius: 6,
+            border: "1px solid #1f2937",
+            background: "var(--bg-panel-2)",
+            color: "var(--text-main)",
+          }}
+        />
 
-
+        <input
+          type="password"
+          placeh
