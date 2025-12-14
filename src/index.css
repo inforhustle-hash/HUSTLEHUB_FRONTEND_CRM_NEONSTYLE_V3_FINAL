@@ -26,15 +26,6 @@ body {
 }
 
 
-:root {
-  --bg-main: #0b0f1a;
-  --bg-panel: #111827;
-  --bg-panel-2: #0f172a;
-
-  --neon-cyan: #22d3ee;
-  --neon-purple: #a855f7;
-  --neon-pink: #ec4899;
-
   --text-main: #e5e7eb;
   --text-muted: #9ca3af;
 
