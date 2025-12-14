@@ -1,10 +1,7 @@
-import Router from "./router/Router.jsx";
-import { AuthProvider } from "./context/AuthContext.jsx";
+import axios from "axios";
 
-export default function App() {
-  return (
-    <AuthProvider>
-      <Router />
-    </AuthProvider>
-  );
-}
+const API = axios.create({
+  baseURL: "https://hustlehub-backend-crm-neonstyle-v3-final.onrender.com"
+});
+
+export default API;
