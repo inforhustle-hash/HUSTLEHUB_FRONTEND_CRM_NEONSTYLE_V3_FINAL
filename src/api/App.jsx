@@ -1,5 +1,10 @@
-import Login from "./pages/Login";
+import { AuthProvider } from "./context/AuthContext";
+import AppRouter from "./router/Router";
 
 export default function App() {
-  return <Login />;
+  return (
+    <AuthProvider>
+      <AppRouter />
+    </AuthProvider>
+  );
 }
