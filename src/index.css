@@ -1,1 +1,26 @@
-body { background:#0a0a12; margin:0; font-family:Arial; color:white; }
+:root {
+  --bg-main: #0b0f1a;
+  --bg-panel: #111827;
+  --bg-panel-2: #0f172a;
+
+  --neon-cyan: #22d3ee;
+  --neon-purple: #a855f7;
+  --neon-pink: #ec4899;
+
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  --glow-cyan: 0 0 12px rgba(34, 211, 238, 0.7);
+  --glow-purple: 0 0 12px rgba(168, 85, 247, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #111827, #020617);
+  color: var(--text-main);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
